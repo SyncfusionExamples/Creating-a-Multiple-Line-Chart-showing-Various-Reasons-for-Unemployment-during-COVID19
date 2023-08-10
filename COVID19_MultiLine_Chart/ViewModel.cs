@@ -1,0 +1,49 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Globalization;
+using System.IO;
+using System.Linq;
+
+namespace COVID19_MultiLine_Chart
+{
+    public class ViewModel
+    {
+        private List<JoblessCategory> unemployedData = new List<JoblessCategory>();
+        private JoblessCategory? model;
+
+        public List<JoblessCategory> UnemploymentData { get; set; }
+        public ViewModel()
+        {
+            UnemploymentData = new List<JoblessCategory>(ReadCSV("D:\\WPF\\Blog\\Arctic_IceEXTENT\\bls_table"));
+        }
+
+        public IEnumerable<JoblessCategory> ReadCSV(string fileName)
+        {
+            List<string> lines = File.ReadAllLines(Path.ChangeExtension(fileName, ".csv")).ToList();
+            //First row containing column names.
+            lines.RemoveAt(0);
+
+            for (int i = 0; i < lines.Count; i++)
+            {
+                string input = lines[i];
+                if (input.EndsWith(","))
+                    input = input.TrimEnd(',');
+
+                // Split by comma, excluding the ones inside quotes
+                string[] data = input.Split(new[] { "\",\"" }, StringSplitOptions.None);
+
+                // Remove leading and trailing quotes from each part
+                for (int j = 0; j < data.Length; j++)
+                {
+                    data[j] = data[j].Trim('\"');
+                }
+
+                DateTime resultDate = DateTime.ParseExact(data[0], "MMM yyyy", CultureInfo.InvariantCulture);
+                model = new JoblessCategory(resultDate, Convert.ToDouble(data[1]), Convert.ToDouble(data[2]), Convert.ToDouble(data[3]), Convert.ToDouble(data[4]), Convert.ToDouble(data[5]), Convert.ToDouble(data[6]));
+                unemployedData.Add(model);
+            }
+
+            return unemployedData;
+        }
+    }
+}
