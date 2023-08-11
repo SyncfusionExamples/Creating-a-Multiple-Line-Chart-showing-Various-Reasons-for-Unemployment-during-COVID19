@@ -14,7 +14,7 @@ namespace COVID19_MultiLine_Chart
         public List<JoblessCategory> UnemploymentData { get; set; }
         public ViewModel()
         {
-            UnemploymentData = new List<JoblessCategory>(ReadCSV("D:\\WPF\\Blog\\Arctic_IceEXTENT\\bls_table"));
+            UnemploymentData = new List<JoblessCategory>(ReadCSV("D:\\WPF\\Blog\\COVID19_MultiLine_Chart\\bls_table"));
         }
 
         public IEnumerable<JoblessCategory> ReadCSV(string fileName)
