@@ -1,4 +1,4 @@
-# Create-a-Multiple-FastLine-Chart-showing-Various-Reasons-for-Unemployment-during-COVID19
+# Creating-a-Multiple-Line-Chart-showing-Various-Reasons-for-Unemployment-during-COVID19
 The Current Population Survey (CPS) is a monthly survey of households conducted by the U.S. Bureau of Census for the Bureau of Labor Statistics. It provides a comprehensive body of data on the labor force, employment, unemployment, persons not in the labor force, hours of work, earnings, and oth-er labor force characteristics.
 To assess and compare the key indicators and the reasons for the unemployment during COVID-19 the data of unemployed people due to various reasons has been taken into considerations to visualize it in a graph.
 
