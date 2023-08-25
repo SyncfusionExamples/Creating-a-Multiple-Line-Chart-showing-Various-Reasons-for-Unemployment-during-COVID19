@@ -4,6 +4,6 @@ To assess and compare the key indicators and the reasons for the unemployment du
 
 Here we will guide you through steps to create a multiple line chart using the Syncfusion WPF FastLineSeries with better performance that normal LineSeries to visualize COVID-19 Economic Trends which has large set of data.
 
-![MultiLine_Chart](https://github.com/SyncfusionExamples/Creating-a-Multiple-Line-Chart-showing-Various-Reasons-for-Unemployment-during-COVID19/assets/102642528/1fa44c6e-9fb0-49d8-a720-6d92d59d2881)
+![MultiLine_Chart](https://github.com/SyncfusionExamples/Creating-a-Multiple-Line-Chart-showing-Various-Reasons-for-Unemployment-during-COVID19/assets/102642528/28bc5ec8-2aad-4f25-ad0c-cb9e26be5d36)
 
-For the Step by step procedure refer the blog page.
+For the Step by step procedure refer the blog [Various Reasons for Unemployment during COVID19](https://www.syncfusion.com/blogs/post/wpf-multi-fast-line-chart-covid-19-unemployment.aspx).
